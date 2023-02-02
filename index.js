@@ -1,15 +1,16 @@
 //express app
-const express = require('express');
+import express from 'express';
+
 const app = express();
 
-const userRouter = require('./src/routers/user')
+import userRouter from'./src/routers/user.js';
 
 //middleware
 app.use(express.json());
-app.use('/user',userRouter)
+app.use('/user',userRouter);
 
-const port = process.env.PORT || 8000
+const port =  8000;
 
 
-app.listen(port,()=>console.log('server running'))
+app.listen(port,()=>console.log('server running'));
 

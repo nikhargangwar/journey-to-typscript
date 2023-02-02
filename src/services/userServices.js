@@ -2,13 +2,13 @@
 let userData =[];
 
 const getAllUserData = ()=>{
-return userData;
-}
+    return userData;
+};
 
 const postUserdata   = (user)=>{
-    const {name,age} = user
-    const data = {name,age}
-userData.push(data);
-return data;
-}
-module.exports = {getAllUserData,postUserdata}
+    const {name,age} = user;
+    const data = {name,age};
+    userData.push(data);
+    return data;
+};
+export default {getAllUserData,postUserdata};

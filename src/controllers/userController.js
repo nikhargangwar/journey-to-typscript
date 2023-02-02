@@ -1,15 +1,15 @@
-const  userServices = require('../services/userServices')
+import userServices from '../services/userServices.js';
 
 const getUserController = (req,res)=>{
 
-    const result = userServices.getAllUserData()
-    return res.status(200).json({data:result})
-}
+    const result = userServices.getAllUserData();
+    return res.status(200).json({data:result});
+};
 
 const postUserController = (req,res)=>{
     const result = userServices.postUserdata(req.body);
-    return res.status(201).json(result)
-}
+    return res.status(201).json(result);
+};
 
 
-module.exports = {getUserController,postUserController}
+export default {getUserController,postUserController};
